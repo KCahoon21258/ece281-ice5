@@ -11,7 +11,7 @@
 --| ---------------------------------------------------------------------------
 --|
 --| FILENAME      : MooreElevatorController.vhd
---| AUTHOR(S)     : Capt Phillip Warner, Capt Dan Johnson, Capt Brian Yarbrough, ***YourName***
+--| AUTHOR(S)     : C3C Kimi Cahoon, Capt Phillip Warner, Capt Dan Johnson, Capt Brian Yarbrough, ***YourName***
 --| CREATED       : 03/2018 Last Modified on 06/24/2020
 --| DESCRIPTION   : This file implements the ICE5 Basic elevator controller (Moore Machine)
 --|
@@ -66,6 +66,17 @@
 --|    sm_<state machine type>  = state machine type definition
 --|    s_<signal name>          = state name
 --|
+--Inputs:
+--    i_up_down : '1' is Up, '0' is Down
+--    i_stop    : '1' is Stop, '0' is Go
+
+--Outputs:
+--    o_floor:
+--        Floor 1: "0001"
+--        Floor 2: "0010"
+--        Floor 3: "0011"
+--        Floor 4: "0100"
+--        Floor 4: "0100"
 --+----------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
